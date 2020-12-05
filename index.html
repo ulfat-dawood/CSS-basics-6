@@ -19,34 +19,114 @@
     <div class="container">
         <h1 class="title">Width & Height</h1>
         <section>
-        <p><code>box-sizing: border-box | content-box</code></p>
+            <p><code>box-sizing: border-box | content-box</code></p>
 
-        <h2>border-box</h2>
-        <p>width and heigh of an element is set while <br> 
-            including BORDER and PADDING as part of the width and height.</p>
+            <h2>border-box</h2>
+            <p>width and heigh of an element is set while <br>
+                including BORDER and PADDING as part of the width and height.</p>
             <img src="./img/border-box.png" width="300" style="display: block; margin:auto">
 
-        
-        <h2>contetn-box</h2>
-        <p>width and heigh of an element is set while <br> 
-            excluding BORDER and PADDING from the width and height.</p>
+
+            <h2>contetn-box</h2>
+            <p>width and heigh of an element is set while <br>
+                excluding BORDER and PADDING from the width and height.</p>
             <img src="./img/content-box.png" width="300" style="display: block; margin:auto">
-        </p>
+            </p>
 
-        <p >Both div below have <span class="highlight">width of 300px</span> , <span class="highlight">height of 150</span> & <span class="highlight">padding of 1em</span></p>
-        <div id="border-box" class="text-box">
-            BORDER BOX
-        </div>
-        <br>
-        <div id="content-box" class="text-box">
-            CONTENT BOX
-        </div>
+            <p>Both div below have <span class="highlight">width of 300px</span> , <span class="highlight">height of
+                    150</span> & <span class="highlight">padding of 1em</span></p>
+            <div id="border-box" class="text-box">
+                BORDER BOX
+            </div>
+            <br>
+            <div id="content-box" class="text-box">
+                CONTENT BOX
+            </div>
+        </section>
 
+        <section>
+            <p><code>width</code> and <code>height</code> properties accept the following values: </p>
+            <ul>
+                <li><code>[number] % | px | vh | vw | em | rem; </code></li>
+                <li>max-content</li>
+                <li>min-content</li>
+                <li>fit-content</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Width</h2>
+            <p>Use <code>px</code> to set fixed width.</p>
 
+            <p>Or use % with <code>width</code>, if you want to allow it to grow and shrink relative to the <span
+                    class="highlight">parent width</span> or browser <span class="highlight">window width</span> .</p>
 
-        
-    </section>
+            <div id="width" class="text-box">
+                width of this div is relative to the parent div which is relative to the window width
+            </div>
+        </section>
+
+        <section>
+            <h2>Height</h2>
+            <p>Use <code>px</code> to set fixed height.</p>
+            <p>Or use <code>hv</code> to set the height relative to the <span class="highlight">viewport height</span> ,
+                and to allow it to grow/ shrink relative to it.</p>
+
+            <br>
+            <div id="height" class="text-box">
+                height of this div is set relative to the viewport height.
+            </div>
+        </section>
+        <section>
+            <h2>fit-content</h2>
+        </section>
+
+        <h1 class="title">Max / min &nbsp;&nbsp;Width / height</h1>
+        <section>
+            <h2>min height/width</h2>
+            <ul>
+            </ul>
+            <li><code>min-height: [number][unit];</code></li>
+            <li><code>min-width: [number][unit];</code></li>
+            <br>
+            <li>spesify a minimum width/height, and allow element to grow in height or width if content increaes or if viewport
+                enlarges.</li>
+            <br>
+            <div id="min-width" class="text-box">
+                width of this div won't shrink less than 500px, even if browser window keep reducing.
+            </div>
+            <br>
+            <div id="min-height" class="text-box">
+                <button id="long-text">long text</button> <button id="short-text">short text</button> <button
+                    id="no-text">&#8634;</button>
+                <div>This is short text</div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>max height/width</h2>
+            <ul>
+            </ul>
+            <li><code>max-height: [number][unit];</code></li>
+            <li><code>max-width: [number][unit];</code></li>
+            <br>
+            <li>spesify a max width/height, and allow the element to shrink down in height or width if content or viewport
+                decrease.</li>
+            <br>
+            <div id="max-width" class="text-box">
+                width of this div won't grow more than 600px, even when browser window keeps increasing.
+            </div>
+            <br>
+            <div id="max-height" class="text-box">
+                <button id="max-long-text">long text</button> <button id="max-short-text">short text</button> <button
+                    id="max-no-text">&#8634;</button>
+                <div></div>
+            </div>
+
+        </section>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 
 </html>
