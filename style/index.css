@@ -51,3 +51,11 @@
     max-height: 300px;
 
 }
+
+#default-width{
+    width: auto;
+}
+
+#fit-width{
+    width: fit-content;
+}

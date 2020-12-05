@@ -19,11 +19,20 @@
     <div class="container">
         <h1 class="title">Width & Height</h1>
         <section>
+            <p><code>width</code> and <code>height</code> properties accept the following values: </p>
+            <ul>
+                <li><code>[number] % | px | vh | vw | em | rem; </code></li>
+                <li>max-content</li>
+                <li>min-content</li>
+                <li>fit-content</li>
+            </ul>
+        </section>
+        <section>
             <p><code>box-sizing: border-box | content-box</code></p>
 
             <h2>border-box</h2>
             <p>width and heigh of an element is set while <br>
-                including BORDER and PADDING as part of the width and height.</p>
+                including <span class="highlight">BORDER</span> and <span class="highlight">PADDING</span> as part of the width and height.</p>
             <img src="./img/border-box.png" width="300" style="display: block; margin:auto">
 
 
@@ -44,15 +53,7 @@
             </div>
         </section>
 
-        <section>
-            <p><code>width</code> and <code>height</code> properties accept the following values: </p>
-            <ul>
-                <li><code>[number] % | px | vh | vw | em | rem; </code></li>
-                <li>max-content</li>
-                <li>min-content</li>
-                <li>fit-content</li>
-            </ul>
-        </section>
+
         <section>
             <h2>Width</h2>
             <p>Use <code>px</code> to set fixed width.</p>
@@ -78,6 +79,38 @@
         </section>
         <section>
             <h2>fit-content</h2>
+            <ul>
+                <li><code>width: fit-contetn;</code></li><br>
+                <li>Set the width to <code>fit-content</code> to force it to wrap the content.</li>
+            </ul>
+            <p>There're two type of elements in CSS</p>
+            <div class="grid">
+                <div></div><div><b>Block Elements</b></div><div><b>Inline Elements</b></div> 
+                <div>Default Width</div><div>-takes 100% of parent width</div><div>-wraps the content <br>-width cannot be set</div>
+                <div>elements</div> 
+                <div>
+                    &lt;div&gt;
+                    &lt;p&gt;
+                    &lt;h1&gt;
+                    &lt;ul&gt;
+                    &lt;li&gt;          
+                </div>
+                <div>
+                    &lt;span&gt;
+                    &lt;a&gt;
+                    &lt;img&gt;
+                    &lt;input&gt;
+                    &lt;button&gt;
+                </div>
+
+            </div>
+            <br>
+            <div id="default-width" class="text-box">div{ width:auto; }</div>
+            <br>
+            <div id="fit-width" class="text-box">div{ width:fit-content; }</div>
+            <br>
+            <span class="text-box">&lt;span&gt;</span>
+            <br>
         </section>
 
         <h1 class="title">Max / min &nbsp;&nbsp;Width / height</h1>
@@ -88,7 +121,8 @@
             <li><code>min-height: [number][unit];</code></li>
             <li><code>min-width: [number][unit];</code></li>
             <br>
-            <li>spesify a minimum width/height, and allow element to grow in height or width if content increaes or if viewport
+            <li>spesify a minimum width/height, and allow element to grow in height or width if content increaes or if
+                viewport
                 enlarges.</li>
             <br>
             <div id="min-width" class="text-box">
@@ -110,7 +144,8 @@
             <li><code>max-height: [number][unit];</code></li>
             <li><code>max-width: [number][unit];</code></li>
             <br>
-            <li>spesify a max width/height, and allow the element to shrink down in height or width if content or viewport
+            <li>spesify a max width/height, and allow the element to shrink down in height or width if content or
+                viewport
                 decrease.</li>
             <br>
             <div id="max-width" class="text-box">
@@ -120,7 +155,7 @@
             <div id="max-height" class="text-box">
                 <button id="max-long-text">long text</button> <button id="max-short-text">short text</button> <button
                     id="max-no-text">&#8634;</button>
-                <div></div>
+                <div>This is short text</div>
             </div>
 
         </section>
